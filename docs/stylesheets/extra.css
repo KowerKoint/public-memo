@@ -1,0 +1,195 @@
+/* Catppuccin Frappe for MkDocs Material
+   Adapted from https://github.com/ruslanlap/mkdocs-catppuccin (frappe-only subset) */
+
+:root {
+  --ctp-frappe-base: #303446;
+  --ctp-frappe-mantle: #292c3c;
+  --ctp-frappe-crust: #232634;
+  --ctp-frappe-surface0: #414559;
+  --ctp-frappe-surface1: #51576d;
+  --ctp-frappe-surface2: #626880;
+  --ctp-frappe-overlay0: #737994;
+  --ctp-frappe-overlay1: #838ba7;
+  --ctp-frappe-overlay2: #949cbb;
+  --ctp-frappe-subtext0: #a5adce;
+  --ctp-frappe-subtext1: #b5bfe2;
+  --ctp-frappe-text: #c6d0f5;
+
+  --ctp-frappe-lavender: #babbf1;
+  --ctp-frappe-blue: #8caaee;
+  --ctp-frappe-sapphire: #85c1dc;
+  --ctp-frappe-sky: #99d1db;
+  --ctp-frappe-teal: #81c8be;
+  --ctp-frappe-green: #a6d189;
+  --ctp-frappe-yellow: #e5c890;
+  --ctp-frappe-peach: #ef9f76;
+  --ctp-frappe-maroon: #ea999c;
+  --ctp-frappe-red: #e78284;
+  --ctp-frappe-mauve: #ca9ee6;
+  --ctp-frappe-pink: #f4b8e4;
+  --ctp-frappe-flamingo: #eebebe;
+  --ctp-frappe-rosewater: #f2d5cf;
+}
+
+[data-md-color-scheme="frappe"] {
+  --md-default-bg-color: var(--ctp-frappe-base);
+  --md-default-bg-color--light: rgba(48, 52, 70, 0.7);
+  --md-default-bg-color--lighter: rgba(48, 52, 70, 0.3);
+  --md-default-bg-color--lightest: rgba(48, 52, 70, 0.12);
+  --md-default-fg-color: var(--ctp-frappe-text);
+  --md-default-fg-color--light: var(--ctp-frappe-subtext0);
+  --md-default-fg-color--lighter: var(--ctp-frappe-overlay1);
+  --md-default-fg-color--lightest: var(--ctp-frappe-surface1);
+  --md-code-bg-color: var(--ctp-frappe-mantle);
+  --md-code-bg-color--light: rgba(41, 44, 60, 0.7);
+  --md-code-bg-color--lighter: rgba(41, 44, 60, 0.3);
+  --md-code-fg-color: var(--ctp-frappe-text);
+
+  --md-primary-fg-color: var(--ctp-frappe-mauve);
+  --md-primary-fg-color--light: var(--ctp-frappe-lavender);
+  --md-primary-fg-color--dark: var(--ctp-frappe-surface0);
+  --md-primary-bg-color: var(--ctp-frappe-text);
+  --md-primary-bg-color--light: var(--ctp-frappe-subtext1);
+
+  --md-accent-fg-color: var(--ctp-frappe-green);
+  --md-accent-fg-color--transparent: rgba(166, 209, 137, 0.1);
+  --md-accent-bg-color: var(--ctp-frappe-text);
+  --md-accent-bg-color--light: var(--ctp-frappe-subtext1);
+
+  --md-typeset-color: var(--ctp-frappe-text);
+  --md-typeset-a-color: var(--ctp-frappe-green);
+
+  --md-code-hl-color: var(--ctp-frappe-surface0);
+  --md-code-hl-number-color: var(--ctp-frappe-peach);
+  --md-code-hl-special-color: var(--ctp-frappe-pink);
+  --md-code-hl-function-color: var(--ctp-frappe-blue);
+  --md-code-hl-constant-color: var(--ctp-frappe-peach);
+  --md-code-hl-keyword-color: var(--ctp-frappe-mauve);
+  --md-code-hl-string-color: var(--ctp-frappe-green);
+  --md-code-hl-name-color: var(--ctp-frappe-text);
+  --md-code-hl-operator-color: var(--ctp-frappe-sky);
+  --md-code-hl-punctuation-color: var(--ctp-frappe-overlay2);
+  --md-code-hl-comment-color: var(--ctp-frappe-overlay0);
+  --md-code-hl-generic-color: var(--ctp-frappe-pink);
+  --md-code-hl-variable-color: var(--ctp-frappe-text);
+
+  --md-admonition-bg-color: var(--ctp-frappe-mantle);
+
+  --md-footer-bg-color: var(--ctp-frappe-mantle);
+  --md-footer-bg-color--dark: var(--ctp-frappe-crust);
+  --md-footer-fg-color: var(--ctp-frappe-text);
+  --md-footer-fg-color--light: var(--ctp-frappe-subtext1);
+  --md-footer-fg-color--lighter: var(--ctp-frappe-subtext0);
+
+  --md-typeset-table-color: var(--ctp-frappe-text);
+  --md-typeset-table-color--light: var(--ctp-frappe-surface0);
+
+  --md-shadow-z1: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+  --md-shadow-z2: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+  --md-shadow-z3: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+/* Header / tabs background matches code surface for a flatter, cooler look */
+[data-md-color-scheme="frappe"] .md-header,
+[data-md-color-scheme="frappe"] .md-tabs {
+  background-color: var(--md-code-bg-color);
+}
+[data-md-color-scheme="frappe"] .md-tabs {
+  border-bottom: 0.05rem solid var(--md-code-hl-color);
+}
+
+.md-nav__link--active,
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.md-search__input {
+  background-color: var(--md-code-bg-color) !important;
+  border: 0.05rem solid var(--md-code-hl-color);
+}
+.md-search__input:hover,
+.md-search__input:focus {
+  border-color: var(--md-accent-fg-color);
+}
+
+.md-typeset pre {
+  border-radius: 0.5rem;
+}
+.md-typeset :not(pre) > code {
+  padding: 0.1em 0.4em;
+  border-radius: 0.3rem;
+  font-weight: 500;
+}
+
+.md-typeset a:hover {
+  color: var(--md-primary-fg-color--light);
+}
+
+.md-typeset .admonition {
+  border-left: 0.2rem solid var(--md-accent-fg-color);
+}
+[data-md-color-scheme="frappe"] .md-typeset .note > .admonition-title,
+[data-md-color-scheme="frappe"] .md-typeset .note > summary {
+  background-color: rgba(140, 170, 238, 0.15);
+  color: var(--ctp-frappe-blue);
+}
+[data-md-color-scheme="frappe"] .md-typeset .tip > .admonition-title,
+[data-md-color-scheme="frappe"] .md-typeset .tip > summary {
+  background-color: rgba(129, 200, 190, 0.15);
+  color: var(--ctp-frappe-teal);
+}
+[data-md-color-scheme="frappe"] .md-typeset .warning > .admonition-title,
+[data-md-color-scheme="frappe"] .md-typeset .warning > summary {
+  background-color: rgba(239, 159, 118, 0.15);
+  color: var(--ctp-frappe-peach);
+}
+[data-md-color-scheme="frappe"] .md-typeset .danger > .admonition-title,
+[data-md-color-scheme="frappe"] .md-typeset .danger > summary {
+  background-color: rgba(231, 130, 132, 0.15);
+  color: var(--ctp-frappe-red);
+}
+[data-md-color-scheme="frappe"] .md-typeset .info > .admonition-title,
+[data-md-color-scheme="frappe"] .md-typeset .info > summary {
+  background-color: rgba(153, 209, 219, 0.15);
+  color: var(--ctp-frappe-sky);
+}
+[data-md-color-scheme="frappe"] .md-typeset .success > .admonition-title,
+[data-md-color-scheme="frappe"] .md-typeset .success > summary {
+  background-color: rgba(166, 209, 137, 0.15);
+  color: var(--ctp-frappe-green);
+}
+
+.md-typeset table:not([class]) {
+  border: 0.05rem solid var(--md-typeset-table-color--light);
+}
+.md-typeset table:not([class]) th {
+  background-color: var(--md-code-hl-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--md-code-hl-color);
+  border-radius: 0.25rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-accent-fg-color);
+}
+
+.md-clipboard:hover {
+  background-color: var(--md-accent-fg-color) !important;
+}
+[data-md-color-scheme="frappe"] .md-clipboard svg {
+  fill: var(--md-default-bg-color) !important;
+}
+
+/* Headings and code share the monospace font; body text stays default */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6,
+.md-header__title,
+.md-nav__title,
+.md-tabs__link {
+  font-family: var(--md-code-font);
+}
