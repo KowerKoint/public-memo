@@ -2,8 +2,12 @@
 
 環境構築やソフトウェアの使い方の備忘録。だいたいNix。
 
-## 環境構築メモ
+## 技術
 ### ネットワーク
-- [mDNSサービス](./setups/network/mdns.md)
+- [mDNSサービス](./tech/network/mdns.md)
 ### デバイス
-- [プリンター](./setups/devices/printer.md)
+- [プリンタ](./tech/devices/printer.md)
+### クロスプラットフォーム
+- [Windows互換レイヤ](./tech/cross-platform/wine.md)
+### デスクトップアプリ
+- [Steam](./tech/apps/steam.md)
