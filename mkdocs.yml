@@ -1,5 +1,6 @@
 site_name: "KowerKoint's /etc"
 site_description: 環境構築・設定の技術メモ
+site_url: https://note.kowerkoint.com/
 
 theme:
   name: material
