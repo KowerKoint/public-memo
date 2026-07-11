@@ -21,21 +21,26 @@ Nixならパッケージ `gamescope` を入れるだけ。
 
 ### 東方神霊廟 パッケージ版
 - 動作環境: NixOS/Wayland/Niri/Steam Play (Proton 4.11-13/7.0-6/9.0-4/11.0, GE-Proton 11-1)
-  - デフォルトのディレクトリ構造だと「東方神霊廟」などの日本語がパスに含まれるが、それだと動作せず (Proton 9.0-4)
-  - 起動時の、ウィンドウサイズを選択するダイアログでは、マウスが効かずキーボード操作もできないが、Enterで入れる
-    - Proton 11.0, GE-Proton 11-1では修正されている模様
-      - ウィンドウサイズを変更したい場合は、`custom.exe` のほうから変更すると動作
-        - こっちもマウスが効かないが、Gamescopeでコンポジタを分離することで使えるようになる (`gamescope -w 640 -h 480 -W 640 -H 480 -- %command%`)
-        - Steam Playなどでは別々のWINE_PREFIXになるので、`custom.exe`のほうで作った設定ファイル (`~/.local/share/Steam/steamapps/compatdata/<prefixのID>/pfx/drive_c/users/steamuser/AppData/Roaming/ShanghaiAlice/th13/th13.cfg`) を、`th13.exe`用のプレフィックスにコピーすると良い
-          - prefixのIDはどこから見るのが一番楽なのかはよくわからないが、ディレクトリの更新日時で判別できる
-  - `custom.exe` などのダイアログは豆腐化してるが、ウィンドウサイズくらいなら数字だけ見て変更可。
-    - protontricksでcjkfontsを入れたが変わらず。corefontsあると変わるかも。
-  - ゲーム本編のセリフやスペカ名などは豆腐化はしてないが一部白欠け？してて、ギリギリ読めるが嫌になる感じ
-    - Proton 7.0-6以前だとこの問題は怒らない
-  - 解像度確認ダイアログ決定後、ゲームウィンドウが表示されない (GE-Proton 11-1)
-  - フルスクリーンだと画面のアスペクト比に伸ばされてしまうのでウィンドウモード推奨
-  - niri特有の問題かもしれないが、ゲームを起動するたびに `th13.cfg` が上書きされてタイリング表示になってしまいアスペクト比が壊れる (`custom.exe`のprefixからコンフィグをコピーし直すと治る)
-    - 以下のniri設定ではじめからフローティングで開くようにすれば解決。なお、開いてからフローティングに切り替えるのではダメ。app-idは、 `niri msg windows` で確認可能。
+- **推奨: Proton 7.0-6 (ウィンドウサイズ設定時のみProton 10.0-4)**
+- デフォルトのディレクトリ構造だと「東方神霊廟」などの日本語がパスに含まれるが、それだと動作せず (Proton 9.0-4)
+  - 日本語以外のロケール固有の問題の可能性あり
+- 起動時の、ウィンドウサイズを選択するダイアログや、`custom.exe` では、**マウスが効かずキーボード操作もできない**が、Enterで入れる
+  - Proton 10.0.4以上, GE-Proton 11-1では修正されている模様
+  - Gamescopeで使えるが、逆にゲーム本編が動かなくなる。`custom.exe` だけなら有用かも。
+    - `gamescope -w 640 -h 480 -W 640 -H 480 -- %command%`
+- 起動時や `custom.exe` のダイアログは、**非日本語ロケールだと文字化けする**
+  - `LANG=ja_JP.UTF-8 LC_ALL=ja_JP.UTF-8 %command%`
+  - `cjkfonts` のインストールも必要な可能性あり
+- `custom.exe` で設定するとき、Steam Play等だと別のprefixになるので、`~/.local/share/Steam/steamapps/compatdata/<prefixのID>/pfx/drive_c/users/steamuser/AppData/Roaming/ShanghaiAlice/th13/th13.cfg` をコピーする
+  - prefixのIDはどこから見るのが一番楽なのかはよくわからないが、ディレクトリの更新日時で判別できる
+- 解像度確認ダイアログ決定後、**ゲームウィンドウが表示されない** (Proton 11.0,GE-Proton 11-1)
+- ゲーム本編のセリフやスペカ名、エンディングなどの**一部テキスト白欠け？する**
+  - ギリギリ読めるが嫌になる感じ
+  - Proton 7.0-6以前だとこの問題は発生しない
+- フルスクリーンだと画面のアスペクト比に伸ばされてしまうので**ウィンドウモード推奨**
+- Niri固有と思われる問題
+  - ゲームを起動するたびに `th13.cfg` が上書きされてタイリング表示になってしまいアスペクト比が壊れる (`custom.exe`のprefixからコンフィグをコピーし直すと治る)
+  - 以下のniri設定ではじめからフローティングで開くようにすれば解決。なお、開いてからフローティングに切り替えるのではダメ。app-idは、 `niri msg windows` で確認可能。
 ```nix
 // th13
 window-rule {

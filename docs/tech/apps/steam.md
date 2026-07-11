@@ -31,6 +31,12 @@ Steamで購入したゲームではたぶん自動的に適用されるが、外
 
 Steam Playに限らない一般的な互換レイヤの解決は [互換レイヤ](../cross-platform/wine.md) を参照。
 
+### protontricks
+Proton環境にフォントや共有ライブラリなどのモジュールを追加したいときはprotontricksを使う。[Wine](../virtualization/wine.md)で言うところのwinetricks。
+
+例えば、 `cjkfonts` と `corefonts` を入れたければ、Nixなら `nix run nixpkgs#protontricks <prefixのID> cjkfonts corefonts`。
+prefixのIDは、 `~/.local/share/Steam/steamapps/compatdata/` 以下の数字のディレクトリ名。
+
 ### GE-Proton
 デフォルトで入っていないGE-Protonレイヤは、Nixだと `nix run nixpkgs#protonup-ng` で簡単に入る。
 もし普通のProtonで動かなければ。使うとよいのかもしれない。
