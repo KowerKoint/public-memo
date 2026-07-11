@@ -29,7 +29,7 @@ Steamで購入したゲームではたぶん自動的に適用されるが、外
 
 起動オプションは「Shortcut」の「LAUNCH OPTIONS」に設定する (例: `PROTON_LOG=1 %command%` で `PROTON_LOG` 環境変数が設定され、Protonのログが `~/` 直下に置かれてトラブルシューティングに役立つ)。
 
-Steam Playに限らない一般的な互換レイヤの解決は [互換レイヤ](../cross-platform/wine.md) を参照。
+Steam Playに限らない一般的な互換レイヤの解決は [互換レイヤ](../virtualization/wine.md) を参照。
 
 ### protontricks
 Proton環境にフォントや共有ライブラリなどのモジュールを追加したいときはprotontricksを使う。[Wine](../virtualization/wine.md)で言うところのwinetricks。
