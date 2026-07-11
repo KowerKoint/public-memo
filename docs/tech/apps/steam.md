@@ -30,3 +30,7 @@ Steamで購入したゲームではたぶん自動的に適用されるが、外
 起動オプションは「Shortcut」の「LAUNCH OPTIONS」に設定する (例: `PROTON_LOG=1 %command%` で `PROTON_LOG` 環境変数が設定され、Protonのログが `~/` 直下に置かれてトラブルシューティングに役立つ)。
 
 Steam Playに限らない一般的な互換レイヤの解決は [互換レイヤ](../cross-platform/wine.md) を参照。
+
+### GE-Proton
+デフォルトで入っていないGE-Protonレイヤは、Nixだと `nix run nixpkgs#protonup-ng` で簡単に入る。
+もし普通のProtonで動かなければ。使うとよいのかもしれない。

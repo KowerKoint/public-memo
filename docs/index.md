@@ -7,7 +7,9 @@
 - [mDNSサービス](./tech/network/mdns.md)
 ### デバイス
 - [プリンタ](./tech/devices/printer.md)
-### クロスプラットフォーム
-- [Windows互換レイヤ](./tech/cross-platform/wine.md)
+### VM/コンテナ/互換レイヤ
+- [Docker](./tech/virtualization/docker.md)
+- [Devcontainer CLI](./tech/virtualization/devcontainer-cli.md)
+- [Windows互換レイヤ](./tech/virtualization/wine.md)
 ### デスクトップアプリ
 - [Steam](./tech/apps/steam.md)
