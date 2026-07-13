@@ -48,3 +48,9 @@ window-rule {
     open-floating true
 }
 ```
+
+### 東方天空璋 パッケージ版
+- 動作環境: NixOS/Wayland/Niri/Steam Play (Proton 7.0-6/11.0)
+- **推奨: Proton 7.0-6 (ウィンドウサイズ設定時のみProton 11.0)**
+- セリフは白かけはしないが、味のない汎用フォントになる (Protom 11.0)
+  - 7.0.6だと正しいフォントで描画されるが、**ルビなどの表示位置はまだ少しおかしい**
