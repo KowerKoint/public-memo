@@ -11,5 +11,7 @@
 - [Docker](./tech/virtualization/docker.md)
 - [Devcontainer CLI](./tech/virtualization/devcontainer-cli.md)
 - [Windows互換レイヤ](./tech/virtualization/wine.md)
+### デスクトップ全般 (Linux)
+- [Wayland](./tech/desktop-linux/wayland.md)
 ### デスクトップアプリ
 - [Steam](./tech/apps/steam.md)
