@@ -61,3 +61,11 @@ window-rule {
 
 ### 東方虹龍洞 Steam版
 - なんもせんでも正常動作。さすがSteam版。
+
+### 東方永夜抄 パッケージ版
+- 動作環境: NixOS/Wayland/Niri/Steam Play (Proton 11.0)
+- 特に何の問題もない
+    - この頃はフォント問題は起こらないようだ
+- 4K画面でやろうとしたりするとフルスクリーンモードでも小さいので、Gamescopeとかで拡大したほうがいいと思う
+    - `gamescope -h 480 -H 2160 -S integer -- %command%`
+
