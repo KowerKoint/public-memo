@@ -15,3 +15,6 @@
 - [Wayland](./tech/desktop-linux/wayland.md)
 ### デスクトップアプリ
 - [Steam](./tech/apps/steam.md)
+- [Zen (ブラウザ)](./tech/apps/zen.md)
+### UI
+- [Catppuccin](./tech/ui/catppuccin.md)
