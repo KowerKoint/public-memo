@@ -11,6 +11,9 @@
 - [Docker](./tech/virtualization/docker.md)
 - [Devcontainer CLI](./tech/virtualization/devcontainer-cli.md)
 - [Windows互換レイヤ](./tech/virtualization/wine.md)
+### パッケージマネージャ
+- [Nix](./tech/package-manager/nix.md)
+- [Nix flake](./tech/package-manager/nix-flake.md)
 ### デスクトップ全般 (Linux)
 - [Wayland](./tech/desktop-linux/wayland.md)
 ### デスクトップアプリ
