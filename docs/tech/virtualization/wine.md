@@ -67,5 +67,10 @@ window-rule {
 - 特に何の問題もない
     - この頃はフォント問題は起こらないようだ
 - 4K画面でやろうとしたりするとフルスクリーンモードでも小さいので、Gamescopeとかで拡大したほうがいいと思う
-    - `gamescope -h 480 -H 2160 -S integer -- %command%`
+    - `gamescope -h 960 -H 2160 -S integer -- %command%`
+    - **Gamescopeを使うのが悪いのか、`-H 2160` のままそれより小さなモニターで起動したのが悪かったのかわからないが、5面くらいでfpsが30代に減ってゲームにならなくなるので注意！！！** フルHD相当のモニターならGamescopeはやめておこう
 
+### 東方鬼形獣 パッケージ版
+- 動作環境: NixOS/Wayland/Niri/Steam Play (Proton 7.0-6/11.0)
+- **推奨: Proton 7.0-6 (ウィンドウサイズ設定時のみProton 11.0)**
+- 天空璋と全く同じ
