@@ -90,3 +90,7 @@ window-rule {
 - 動作環境: NixOS/Wayland/Niri/Steam Play (Proton 7.0-6)
 - アプリ名が `東方紅魔郷.exe` だからか、日本語ロケールでないと起動しない
     - `LANG=ja_JP.UTF-8 LC_ALL=ja_JP.UTF-8 %command%`
+
+### 東方風神録 パッケージ版
+- 動作環境: NixOS/Wayland/Niri/Steam Play (Proton 7.0-6)
+- 問題なし
