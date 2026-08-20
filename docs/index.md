@@ -3,6 +3,9 @@
 環境構築やソフトウェアの使い方の備忘録。だいたいNix。
 
 ## 技術
+### OS
+- [NixOS設定のflake化](./tech/os/nixos-flake.md)
+- [home-manager](./tech/os/home-manager.md)
 ### ネットワーク
 - [mDNSサービス](./tech/network/mdns.md)
 ### デバイス
@@ -19,5 +22,6 @@
 ### デスクトップアプリ
 - [Steam](./tech/apps/steam.md)
 - [Zen (ブラウザ)](./tech/apps/zen.md)
+- [ONLYOFFICE](./tech/apps/onlyoffice.md)
 ### UI
 - [Catppuccin](./tech/ui/catppuccin.md)
