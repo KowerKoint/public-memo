@@ -7,6 +7,7 @@
 - [NixOS設定のflake化](./tech/os/nixos-flake.md)
 - [home-manager](./tech/os/home-manager.md)
 - [nix-ld](./tech/os/nix-ld.md)
+- [DBus](./tech/os/dbus.md)
 ### ネットワーク
 - [mDNSサービス](./tech/network/mdns.md)
 ### デバイス
@@ -20,6 +21,7 @@
 - [Nix flake](./tech/package-manager/nix-flake.md)
 ### デスクトップ全般 (Linux)
 - [Wayland](./tech/desktop-linux/wayland.md)
+- [XDG Desktop Portal](./tech/desktop-linux/xdg-desktop-portal)
 ### デスクトップアプリ
 - [Steam](./tech/apps/steam.md)
 - [Zen (ブラウザ)](./tech/apps/zen.md)
