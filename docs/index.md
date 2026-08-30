@@ -6,6 +6,7 @@
 ### OS
 - [NixOS設定のflake化](./tech/os/nixos-flake.md)
 - [home-manager](./tech/os/home-manager.md)
+- [nix-ld](./tech/os/nix-ld.md)
 ### ネットワーク
 - [mDNSサービス](./tech/network/mdns.md)
 ### デバイス
@@ -25,3 +26,5 @@
 - [ONLYOFFICE](./tech/apps/onlyoffice.md)
 ### UI
 - [Catppuccin](./tech/ui/catppuccin.md)
+### 開発
+- [Android 開発](./tech/development/android.md)
