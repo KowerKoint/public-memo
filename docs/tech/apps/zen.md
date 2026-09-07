@@ -3,6 +3,15 @@ FirefoxベースのコミュニティOSSブラウザ。
 
 今のところ私はZenは初心者なので多くは語れないが、垂直タブ・ワークスペース・上にバーがないところ等のZenらしさを結構気に入っている。
 
+## インストール
+Windowsなら
+
+```ps
+winget.exe install zen-browser
+```
+
+Nixは少しややこしいので後で書く。
+
 ## Firefox Sync
 私はモバイル (Android, iPad) ではFirefoxを使うので、ZenにもFirefox Syncがあって助かる。Settingsの「Account and sync」からできる。
 
