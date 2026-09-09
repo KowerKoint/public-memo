@@ -128,6 +128,11 @@
 .md-typeset .admonition {
   border-left: 0.2rem solid var(--md-accent-fg-color);
 }
+[data-md-color-scheme="frappe"] .md-typeset .admonition.note,
+[data-md-color-scheme="frappe"] .md-typeset details.note {
+  color: var(--ctp-frappe-text);
+  font-size: 0.8rem;
+}
 [data-md-color-scheme="frappe"] .md-typeset .note > .admonition-title,
 [data-md-color-scheme="frappe"] .md-typeset .note > summary {
   background-color: rgba(140, 170, 238, 0.15);
