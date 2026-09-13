@@ -27,6 +27,8 @@
 - [Wayland](./tech/desktop-linux/wayland.md)
 - [Waybar](./tech/desktop-linux/waybar.md)
 - [XDG Desktop Portal](./tech/desktop-linux/xdg-desktop-portal.md)
+- [Fcitx5](./tech/desktop-linux/fcitx5.md)
+- [キーボード設定](./tech/desktop-linux/keyboard.md)
 ### デスクトップ全般 (Windows)
 - [Windows デュアルブート](./tech/desktop-windows/dualboot.md)
 - [PowerToys](./tech/desktop-windows/powertoys.md)

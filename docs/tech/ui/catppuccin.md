@@ -34,14 +34,25 @@ zellij options --theme catpuccin-frappe
 
 まず、`about:profiles` からプロファイルのRoot Directoryを知る (例: `~/.config/zen/<なんとか>.Default Profile`)。その中に `chrome/` ディレクトリを作る (すでにあるかも)。
 
-[公式リポジトリ](https://github.com/catppuccin/zen-browser) にあるのだが、どうも最近のZenに追従できてなさそうなので[フォーク](https://github.com/code-irisnk/catppuccin-zen-browser/tree/main) のものを使った。これは状況によるかも。
+[公式リポジトリ](https://github.com/catppuccin/zen-browser) にあるのだが、どうも最近のZenに追従できてなさそうなので[フォーク](https://github.com/code-irisnk/catppuccin-zen-browser/tree/main) のものを使った。さらに以下の変更を行って自分の [フォーク](https://github.com/KowerKoint/catppuccin-zen-browser) を作った。
+- CSS全体が `@media (prefers-color-scheme: dark)` で条件付けられている。
+システムがダークテーマでそれがZenに伝わっていればいいだが、自分のniri環境ではそうはならななかったので、ここを `@media all` に変えた
+- プルダウンメニューのホバーされていない項目の文字が背景色と同化していて読めないので以下を追加した
+```diff
++  /* Keep inactive popup-menu labels readable against the themed background. */
++  menupopup {
++    --menu-color: #c6d0f5 !important;
++    --panel-color: #c6d0f5 !important;
++  }
++
++  menupopup > :is(menu, menuitem):not([disabled="true"]):not([_moz-menuactive="true"]):not(:hover) {
++    color: #c6d0f5 !important;
++  }
+```
 
-`themes/Frappe/Blue/` などの場所にある3つのファイルを、先程の `chrome/` ディレクトリに置く。
+`themes/Frappe/Lavender/` などの場所にある3つのファイルを、先程の `chrome/` ディレクトリに置く。
 
 `about:config` から、`toolkit.legacyUserProfileCustomizations.stylesheets` を有効化する。
 
-補足:
-
-- CSSインジェクションに注意です！結構なんでもされうるので一応脆弱性チェックしておくといいかも。
-- CSS全体が `@media (prefers-color-scheme: dark)` で条件付けられている。
-システムがダークテーマでそれがZenに伝わっていればいいだが、自分のniri環境ではそうはならななかったので、**うまくいかないときはここを `@media all` に変えよう！**
+!!! note
+    CSSインジェクションに注意です！結構なんでもされうるので一応脆弱性チェックしておくといいかも。
