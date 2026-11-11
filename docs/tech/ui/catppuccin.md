@@ -17,6 +17,12 @@ GitHubの[catppuccin Organization](https://github.com/catppuccin) を見ると�
 ## Alacritty
 [GitHub](https://github.com/catppuccin/alacritty)の通りに設定
 
+## WezTerm
+内蔵されてる。`.wezterm.lua` で
+```lua
+config.color_scheme = "Catppuccin Frappe"
+```
+
 ## Neovim
 [このプラグイン](https://github.com/catppuccin/nvim) を入れる。後で追記。
 
@@ -24,9 +30,9 @@ GitHubの[catppuccin Organization](https://github.com/catppuccin) を見ると�
 [このCSS](https://github.com/catppuccin/waybar) を入れる。後で追記。
 
 ## Zellij
-[ここ](https://github.com/catppuccin/zellij) にある `catpuccin.kdl` を `~/.config/zellij/` に配置して、
-```fish
-zellij options --theme catpuccin-frappe
+[ここ](https://github.com/catppuccin/zellij) にある `catpuccin.kdl` を `~/.config/zellij/` に配置して、`config.kdl` で
+```kdl
+theme "catppuccin-frappe
 ```
 
 ## Zenブラウザ
