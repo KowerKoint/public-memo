@@ -20,6 +20,8 @@
 - [Docker](./tech/virtualization/docker.md)
 - [Devcontainer CLI](./tech/virtualization/devcontainer-cli.md)
 - [Windows 互換レイヤ](./tech/virtualization/wine.md)
+### エディタ系
+- [Neovim](./tech/editor/neovim.md)
 ### パッケージマネージャ
 - [Nix](./tech/package-manager/nix.md)
 - [Nix flake](./tech/package-manager/nix-flake.md)
