@@ -30,6 +30,9 @@ config.font = wezterm.font 'UDEV Gothic NFRG'
 ```
 [リストを与えてfallback](https://wezterm.org/config/fonts.html)もできるっぽい。
 
+## niriのwindow rule
+niriのconfigでウィンドウの横幅がweztermに委ねられてるが、普通にniriに合わせて画面幅x0.5で構わないのでコメントアウトしておくと良い
+
 ## macOSのIMEにCtrlを渡す
 IMEの Ctrl+I (カタカナ) や Ctrl+T (半角英数) などを使いたいのに、IMEに渡らずにターミナルで止められてしまうので以下で変更
 
