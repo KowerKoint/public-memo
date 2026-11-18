@@ -39,3 +39,10 @@ IMEの Ctrl+I (カタカナ) や Ctrl+T (半角英数) などを使いたいの�
 ```lua
 config.macos_forward_to_ime_modifier_mask = 'SHIFT|CTRL'
 ```
+## CodexやClaude CodeでShift+Enterで改行する
+これは標準ではなく、kitty keyboard protocolに基づく挙動らしい。ghosttyとかalacrittyとかではデフォルトで有効化されてるようだった。
+以下で有効化できる。ただ、ctrl+jで改行するのが標準っぽいのでそれに慣らしちゃおうかなぁ。
+
+```lua
+config.enable_kitty_keyboard = true
+```
